@@ -1,0 +1,8 @@
+##### INSTALL BITCOIN CORE #######
+https://bitcoin.stackexchange.com/questions/91909/how-to-install-bitcoind-bitcoin-core-on-ubuntu
+Download bitcoin core tar.gz
+tar -xzf bitcoin-25.0-x86_64-linux-gnu.tar.gz
+copy the folder in /usr/
+start btc rpc node = bitcoind --testnet --server --rpcport=8332 --rpcuser=YourUsername --rpcpassword=YourSuperSecurePSWD -wallet=wallet
+
+

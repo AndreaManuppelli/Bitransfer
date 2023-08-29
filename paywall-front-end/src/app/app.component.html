@@ -1,0 +1,12 @@
+
+<!-- Animated background -->
+<ng-particles
+    *ngIf="!mobileScreen"
+    [id]="id"
+    [options]="particlesOptions"
+    [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"
+></ng-particles>
+
+
+<router-outlet></router-outlet>
