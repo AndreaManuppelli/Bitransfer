@@ -249,7 +249,7 @@ def register(request):
         return Response({"detail": "Username already exist."}, status=status.HTTP_400_BAD_REQUEST)
 
     # Crete new user in db
-    user = CustomUser.objects.create_user(username=username, password=password, btc_balance=0, plan=0, remaining_days_plan=0)
+    user = CustomUser.objects.create_user(username=username, password=password, btc_balance=0, plan=0, remaining_minutes_plan=0)
 
     # Get auth token
     token = Token.objects.create(user=user)

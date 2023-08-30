@@ -17,7 +17,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     btc_balance = models.FloatField()
     plan = models.IntegerField()
-    remaining_days_plan = models.IntegerField()
+    remaining_minutes_plan = models.IntegerField()
 
     objects = CustomUserManager()
     

@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-dw)(y08pt^!*8951qe3b&7ppvc#ympbfwmj-u&_ndt-p^1mcx7"
 
-# SECURITY WARNING: don't run with debug turned on in production! NEVER SET TO FALSE!
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
@@ -55,7 +55,7 @@ USER_PLANS_LIST = [
         "price": 0, # amount in USD
         "rate": 1, # How much requests for "rate_unit"
         "rate_unit": "h", # "s" for seconds, "m" for minutes, "h" for hours, "d" for day
-        "plan_duration": 365 # Plan duration in days
+        "plan_duration": 525600 # Plan duration in minutes
     },
     {
         "id": 1, # For each plan increase this by 1
@@ -64,7 +64,7 @@ USER_PLANS_LIST = [
         "price": 3, # amount in USD
         "rate": 100, # How much requests for "rate_unit"
         "rate_unit": "h", # "s" for seconds, "m" for minutes, "h" for hours, "d" for day
-        "plan_duration": 365 # Plan duration in days
+        "plan_duration": 525600 # Plan duration in minutes
     },
 ]
 

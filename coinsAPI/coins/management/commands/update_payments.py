@@ -197,10 +197,10 @@ class Command(BaseCommand):
                                     # Check if the user bought the plan they already had
                                     if user.first().plan == i.plan_id:
                                         # Increase user's plan duration
-                                        user.update(remaining_days_plan=F('remaining_days_plan') + corresponding_plan_duaration)
+                                        user.update(remaining_minutes_plan=F('remaining_minutes_plan') + corresponding_plan_duaration)
                                     else:
-                                        # Reset remaining days and apply the new plan duration because the new plan is different
-                                        user.update(remaining_days_plan=corresponding_plan_duaration)
+                                        # Reset remaining minutes and apply the new plan duration because the new plan is different
+                                        user.update(remaining_minutes_plan=corresponding_plan_duaration)
                                     
 
                                 # Check if confirmed funds for this payment are less than expected amount
