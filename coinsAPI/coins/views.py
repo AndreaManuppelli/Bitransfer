@@ -17,7 +17,6 @@ import requests
 import math
 from .wallet import Wallet
 from .decorators import *
-import hashlib
 import base58
 from urllib.parse import urlparse
 

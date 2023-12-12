@@ -1,5 +1,4 @@
 from .views import update_coins_rate
-from coins.tasks import update_payments
 class StartupMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
@@ -10,6 +9,4 @@ class StartupMiddleware:
         return response
     def coins_update(self):
         update_coins_rate()
-        
-        update_payments.apply_async()
         pass
