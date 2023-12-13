@@ -1,4 +1,4 @@
-// Importing necessary Angular core components and lifecycle hooks.
+
 import { Component, OnInit } from '@angular/core';
 import { Options } from 'ngx-qrcode-styling'; // Options for QR code styling
 import { ServerService } from '../server.service'; // Service to interact with the backend/server
@@ -138,28 +138,28 @@ export class PaymentComponent implements OnInit {
         setTimeout(() => {
             this.currentCard = 'none';
 
-            // Fai apparire la card2 dopo un ulteriore delay
+            // Show card2 after delay
             setTimeout(() => {
                 this.currentCard = 'card2';
                 this.currentAnimation = 'none';
             }, 50);  // Questo è solo un breve intervallo per permettere alla card di essere effettivamente nascosta prima dell'animazione di entrata.
 
-        }, 800); // Durata dell'animazione di uscita
+        }, 800);
 
     } else {
         this.currentAnimation = 'changeToCard1';
 
-        // Fai scomparire la card2
+        // Hide card2
         setTimeout(() => {
             this.currentCard = 'none';
 
-            // Fai apparire la card1 dopo un ulteriore delay
+            // Show card2 after delay
             setTimeout(() => {
                 this.currentCard = 'card1';
                 this.currentAnimation = 'none';
-            }, 50);  // Analogamente, un breve intervallo prima dell'animazione di entrata.
+            }, 50);  // Small delay.
 
-        }, 800); // Durata dell'animazione di uscita
+        }, 800); 
     }
   }
 
