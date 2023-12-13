@@ -219,11 +219,7 @@ class Wallet():
                 return None
 
 
-        
-#walletBTC = Wallet.Btc(user="AndreaBitransfer", password="Stambalumbo8199BitransferSecurePassword", wallet_name="wallet")
-#print(walletBTC.get_balance())
-#print(walletBTC.send_to_address("2Mtm6EnEuXoDXGA4c82BPvvtmvPCNrwbNY3", 0.11522789))
-#print(walletBTC.get_new_address())
+
 
 
 
