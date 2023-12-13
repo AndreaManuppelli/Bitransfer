@@ -407,6 +407,7 @@ def new_payment_view(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+@dynamic_ratelimit
 def get_payment_requests(request):
     """
     View function to get all own payments data
@@ -449,6 +450,7 @@ def get_payment_requests(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+@dynamic_ratelimit
 def get_active_payment_requests(request):
     """
     View function to get only active own payments data
@@ -571,6 +573,7 @@ def get_payment_request_by_id_public(request):
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
+@dynamic_ratelimit
 def withdraw_funds(request):
     """
     View to withdraw funds from payment
@@ -631,6 +634,7 @@ def withdraw_funds(request):
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
+@dynamic_ratelimit
 def available_funds(request):
     """
     View to get available withdrawable funds
