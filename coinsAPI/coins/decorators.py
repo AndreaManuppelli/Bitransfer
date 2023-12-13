@@ -18,7 +18,7 @@ def dynamic_ratelimit(view_func):
 
         # Format rete limit string
         rate = f'{matching_plan_dict["rate"]}/{matching_plan_dict["rate_unit"]}'
-        print(rate)
+        
         # Apply the rate limit
         ratelimited_view = ratelimit(key='user', rate=rate, block=True)(view_func)
         return ratelimited_view(request, *args, **kwargs)
